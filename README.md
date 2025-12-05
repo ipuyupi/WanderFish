@@ -3,7 +3,7 @@
 *A cozy world-travel fishing game built with React + Vite.*
 
 🌐 **Live Demo:**  
-👉 https://wanderfish.pages.dev/
+👉 https://wanderfish.pages.dev
 
 ---
 
