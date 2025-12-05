@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Fredoka", "Baloo 2", "Comic Neue", system-ui, sans-serif;
+  color: #0c2340;
+  background: radial-gradient(circle at 20% 20%, #e0f3ff, #f7fbff 45%), #f7fbff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Casting animation */
+@keyframes castPole {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  30% {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  60% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes castLine {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 0;
+    opacity: 0;
+  }
+  60% {
+    height: 100px;
+    opacity: 1;
+  }
+  100% {
+    height: 100px;
+    opacity: 1;
+  }
+}
+
+@keyframes castHook {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  30% {
+    bottom: 0;
+    opacity: 0;
+  }
+  60% {
+    bottom: 100px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100px;
+    opacity: 1;
+  }
+}
+
+.fishing-pole {
+  animation: castPole 0.8s ease-out;
+}
+
+.fishing-line {
+  animation: castLine 0.8s ease-out;
+}
+
+.fishing-hook {
+  animation: castHook 0.8s ease-out;
+}
+
+/* Blinking animation for "Ready to cast!" */
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.blink-text {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+/* Shimmer/shine animation for "Ready to cast!" */
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shine-text {
+  background: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 40%,
+    #fff 50%,
+    #000 60%,
+    #000 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
