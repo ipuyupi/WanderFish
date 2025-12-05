@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+# 🎣 WanderFish  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*A cozy world-travel fishing game built with React + Vite.*
 
-Currently, two official plugins are available:
+🌐 **Live Demo:**  
+👉 https://wanderfish.pages.dev/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌍 About the Game
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**WanderFish** lets players explore different world regions, cast a fishing line, and reel in unique fish species.
 
-## Expanding the ESLint configuration
+Players can:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🎣 Cast and reel to catch fish  
+- 🌎 Travel across Indonesia, Japan, Taiwan, America, Norway, and Finland  
+- 🐠 View collected fish  
+- 🔍 See which fish are still missing  
+- 🌊 Enjoy a calm and relaxing fishing experience  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 🎣 Interactive fishing mechanic (cast → reel → catch)  
+- 🐟 Region-specific fish species  
+- 📘 Collection tracker  
+- 🌍 Simple region switching  
+- ⚡ Fast and smooth UI (React + TypeScript + Vite)
+
+---
+
+## 🧩 Tech Stack
+
+- **React**  
+- **TypeScript**  
+- **Vite**  
+- **Cloudflare Pages**
+
+---
+
+## 🛠 Run Locally
+
+### 1️⃣ Install dependencies  
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2️⃣ Start development server  
+```sh
+npm run dev
 ```
+
+### 3️⃣ Build for production  
+```sh
+npm run build
+```
+
+---
+
+## 📁 Folder Structure 
+
+```txt
+src/
+  components/
+  regions/
+  data/
+  assets/
+public/
+.gitignore
+package.json
+```
+
+---
+
+## 🚀 Deployment
+
+WanderFish is deployed using **Cloudflare Pages**.  
+
+---
+
+# 🎣 Feel free to explore and have fun!!! 
